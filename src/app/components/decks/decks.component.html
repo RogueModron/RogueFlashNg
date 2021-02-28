@@ -1,0 +1,35 @@
+<div>
+    <button type="button"
+        class="mat-elevation-z7 plus-button"
+        mat-mini-fab color="primary"
+        (click)="create()">
+        <mat-icon>add</mat-icon>
+    </button>
+
+    <app-search (searchRequest)="search($event)"></app-search>
+
+    <div class="items-container">
+        <mat-card
+            class="mat-elevation-z5 item-card"
+            *ngFor="let deck of decks$ | async">
+            <mat-card-header>
+                <mat-card-title>
+                    <div class="mat-title">
+                        {{deck.description || '[To Complete]'}}
+                    </div>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content *ngIf="deck.notes">
+                <div class="mat-body-1">
+                    {{deck.notes}}
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <a routerLink="/decks/{{deck.id}}"
+                    mat-flat-button>
+                    OPEN
+                </a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

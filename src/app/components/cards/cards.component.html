@@ -1,0 +1,46 @@
+<div>
+    <a routerLink="/decks/{{deckId}}/review/"
+        class="mat-elevation-z7 action-button"
+        mat-mini-fab color="accent">
+        <mat-icon>tour</mat-icon>
+    </a>
+
+    <button type="button"
+        class="mat-elevation-z7 plus-button"
+        mat-mini-fab color="primary"
+        (click)="create()">
+        <mat-icon>add</mat-icon>
+    </button>
+
+    <app-search (searchRequest)="search($event)"></app-search>
+
+    <div class="items-container">
+        <mat-card
+            class="mat-elevation-z5 item-card"
+            *ngFor="let card of cards$ | async">
+            <mat-card-header>
+                <mat-card-title>
+                    <div class="mat-title">
+                        {{card.sideA || '[To Complete]'}}
+                    </div>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    <div class="mat-subheading-1">
+                        {{card.sideB || '[To Complete]'}}
+                    </div>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content *ngIf="card.notes">
+                <div class="mat-body-1">
+                    {{card.notes}}
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <a routerLink="/decks/{{card.deckId}}/cards/{{card.cardId}}"
+                    mat-flat-button>
+                    OPEN
+                </a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

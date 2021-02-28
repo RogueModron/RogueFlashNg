@@ -1,0 +1,12 @@
+<mat-toolbar>
+    <span>{{title}}</span>
+</mat-toolbar>
+
+<div fxLayout="row">
+    <div fxFlex fxFlex.lt-sm="1em"></div>
+    <div fxFlex.lt-sm="100%" fxFlex.gt-sm="450px">
+        <app-navigator></app-navigator>
+        <router-outlet></router-outlet>
+    </div>
+    <div fxFlex fxFlex.lt-sm="1em"></div>
+</div>

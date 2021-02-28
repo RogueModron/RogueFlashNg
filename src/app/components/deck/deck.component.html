@@ -1,0 +1,42 @@
+<div>
+    <a routerLink="/decks/{{deckId}}/cards/"
+        class="mat-elevation-z7 forward-button"
+        mat-mini-fab color="primary">
+        <mat-icon>forward</mat-icon>
+    </a>
+
+    <a routerLink="/decks/{{deckId}}/review/"
+        class="mat-elevation-z7 action-button"
+        mat-mini-fab color="accent">
+        <mat-icon>tour</mat-icon>
+    </a>
+
+    <button type="button"
+        class="mat-elevation-z7 minus-button"
+        mat-mini-fab color="warn"
+        (click)="openDeleteDialog()">
+        <mat-icon>remove</mat-icon>
+    </button>
+
+    <form [formGroup]="deckForm" class="mat-elevation-z5">
+        <div>
+            <mat-form-field>
+                <mat-label>Description</mat-label>
+                <input type="text"
+                    matInput
+                    formControlName="description"
+                >
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Notes</mat-label>
+                <textarea
+                    rows="5"
+                    matInput
+                    formControlName="notes"
+                ></textarea>
+            </mat-form-field>
+        </div>
+    </form>
+</div>

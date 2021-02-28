@@ -1,0 +1,14 @@
+form {
+    padding: 1.5em;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.minus-button {
+    bottom: 2em;
+    position: fixed;
+    right: 1em;
+    z-index: 10;
+}

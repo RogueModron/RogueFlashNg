@@ -1,0 +1,45 @@
+<div class="mat-elevation-z5 review-section">
+    <div *ngIf="card" class="review-data">
+        <p>
+            {{card.sideA}}
+        </p>
+
+        <mat-divider></mat-divider>
+
+        <p>
+            {{card.sideB}}
+        </p>
+
+        <div [style.visibility]="evaluated ? 'visible' : 'hidden'">
+            <mat-divider></mat-divider>
+
+            <p>
+                {{card.notes}}
+            </p>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div *ngIf="evaluated">
+            <button type="button"
+                mat-flat-button color="primary"
+                (click)="next()">
+                Next
+            </button>
+        </div>
+        <div *ngIf="!evaluated">
+            <button type="button"
+                class="review-button"
+                *ngFor="let value of [0, 1, 2, 3, 4]"
+                mat-mini-fab color="accent"
+                (click)="evaluate(value)">
+                {{value}}
+            </button>
+        </div>
+    </div>
+    <div *ngIf="!card">
+        <p>
+            No card to review.
+        </p>
+    </div>
+</div>

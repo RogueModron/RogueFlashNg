@@ -1,0 +1,28 @@
+form {
+    padding: 1.5em;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.action-button {
+    bottom: 7em;
+    position: fixed;
+    right: 1em;
+    z-index: 10;
+}
+
+.forward-button {
+    bottom: 11em;
+    position: fixed;
+    right: 1em;
+    z-index: 10;
+}
+
+.minus-button {
+    bottom: 2em;
+    position: fixed;
+    right: 1em;
+    z-index: 10;
+}

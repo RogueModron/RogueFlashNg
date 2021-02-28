@@ -1,0 +1,32 @@
+<div>
+    <span>
+        <mat-icon>arrow_right</mat-icon>
+        <a routerLink="/decks">
+            Decks
+        </a>
+    </span>
+    <span *ngIf="deckEnabled">
+        <mat-icon>arrow_right</mat-icon>
+        <a routerLink="/decks/{{lastDeckId}}">
+            Deck
+        </a>
+    </span>
+    <span *ngIf="cardsEnabled">
+        <mat-icon>arrow_right</mat-icon>
+        <a routerLink="/decks/{{lastDeckId}}/cards">
+            Cards
+        </a>
+    </span>
+    <span *ngIf="cardEnabled">
+        <mat-icon>arrow_right</mat-icon>
+        <a routerLink="/decks/{{lastDeckId}}/cards/{{lastCardId}}">
+            Card
+        </a>
+    </span>
+    <span *ngIf="reviewEnabled">
+        <mat-icon>arrow_right</mat-icon>
+        <a routerLink="/decks/{{lastDeckId}}/review">
+            Review
+        </a>
+    </span>
+</div>

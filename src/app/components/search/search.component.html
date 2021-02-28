@@ -1,0 +1,21 @@
+<div fxLayout="row">
+    <div fxFlex="grow">
+        <mat-form-field>
+            <mat-label>Keyword to search</mat-label>
+            <input type="search"
+                value="{{proposedSearchKey}}"
+                matInput
+                #searchText
+                (keydown.enter)="search(searchText.value)"
+            >
+        </mat-form-field>
+    </div>
+    <div fxFlex="120px">
+        <button type="button"
+            mat-stroked-button
+            (click)="search(searchText.value)">
+            <mat-icon>search</mat-icon>
+            Search
+        </button>
+    </div>
+</div>

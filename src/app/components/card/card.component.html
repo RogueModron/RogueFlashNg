@@ -1,0 +1,55 @@
+<div>
+    <button type="button"
+        class="mat-elevation-z7 minus-button"
+        mat-mini-fab color="warn"
+        (click)="openDeleteDialog()">
+        <mat-icon>remove</mat-icon>
+    </button>
+
+    <form [formGroup]="cardForm" class="mat-elevation-z5">
+        <div>
+            <mat-form-field>
+                <mat-label>Side A</mat-label>
+                <textarea
+                    rows="3"
+                    matInput
+                    formControlName="sideA"
+                ></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Side B</mat-label>
+                <textarea
+                    rows="3"
+                    matInput
+                    formControlName="sideB"
+                ></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Notes</mat-label>
+                <textarea
+                    rows="3"
+                    matInput
+                    formControlName="notes"
+                ></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Tags</mat-label>
+                <input type="text"
+                    matInput
+                    formControlName="tags"
+                >
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-checkbox formControlName="noBA">
+                Disable B-A
+            </mat-checkbox>
+        </div>
+    </form>
+</div>

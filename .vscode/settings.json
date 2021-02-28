@@ -1,0 +1,8 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "editor.quickSuggestionsDelay": 100,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true
+}
